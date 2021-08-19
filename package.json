@@ -1,0 +1,16 @@
+{
+  "name": "easy-to-understand",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:huomarvin/easy-to-understand.git",
+  "author": "xhh <huo.marvin@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@koa/router": "^10.1.0",
+    "busboy": "^0.3.1",
+    "koa": "^2.13.1",
+    "koa-static": "^5.0.0",
+    "nodemon": "^2.0.12",
+    "uuid": "^8.3.2"
+  }
+}
