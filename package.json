@@ -12,5 +12,8 @@
     "koa-static": "^5.0.0",
     "nodemon": "^2.0.12",
     "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "lerna": "^4.0.0"
   }
 }
