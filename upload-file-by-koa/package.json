@@ -1,0 +1,13 @@
+{
+  "name": "upload-file-by-koa",
+  "private": true,
+  "version": "1.0.0",
+  "description": "一个简单的单文件前后端上传demo",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "Marvin <huo_marvin@163.com>",
+  "license": "MIT"
+}

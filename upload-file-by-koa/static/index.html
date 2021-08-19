@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    </script>
+</head>
+
+<body>
+    <input type="file" id="file" name="file" accept=".jpg, .jpeg, .png" />
+    <button id="upload">上传</button>
+    <script>
+        let file = null;
+        const fileDom = document.getElementById('file');
+        fileDom.addEventListener('change', (event) => {
+            console.log(event);
+            file = event.target.files[0];
+        })
+        document.getElementById('upload').addEventListener('click', () => {
+            const xhr = new XMLHttpRequest();
+            const formData = new FormData();
+            formData.append('file', file)
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    let result = xhr.responseText;
+                    const json = JSON.parse(result)
+                    let img = document.getElementById('img')
+                    if (!img) {
+                        img = document.createElement('img');
+                        img.id = 'img'
+                    }
+                    img.src = `http://localhost:3000/img/${json.data}`;
+                    document.body.append(img)
+                    fileDom.value = '';
+                }
+            }
+            xhr.upload.onprogress = function (event) {
+                console.log('event', event);
+            }
+
+            xhr.open('post', '/upload/form')
+            xhr.send(formData)
+        })
+    </script>
+</body>
+
+</html>
