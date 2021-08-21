@@ -2,7 +2,10 @@
   "name": "easy-to-understand",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "git@github.com:huomarvin/easy-to-understand.git",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/huomarvin/easy-to-understand.git"
+  },
   "author": "xhh <huo.marvin@gmail.com>",
   "license": "MIT",
   "dependencies": {
@@ -12,6 +15,7 @@
     "@koa/router": "^10.1.0",
     "antd": "^4.16.12",
     "busboy": "^0.3.1",
+    "http-server": "^13.0.0",
     "jest": "^27.0.6",
     "koa": "^2.13.1",
     "koa-static": "^5.0.0",
@@ -21,5 +25,14 @@
   },
   "devDependencies": {
     "lerna": "^4.0.0"
-  }
+  },
+  "description": "一个降低理解难度的项目，将复杂的内容通过简单的代码来实现",
+  "bugs": {
+    "url": "https://github.com/huomarvin/easy-to-understand/issues"
+  },
+  "homepage": "https://github.com/huomarvin/easy-to-understand#readme",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": []
 }
