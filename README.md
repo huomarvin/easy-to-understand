@@ -16,7 +16,7 @@ import Button from "antd/lib/button";
 ```
 
 [2021 年 08 月 21 日] [debounce] 简单的防抖函数实现
-[2021 年 08 月 22 日] 节流
+[2021 年 08 月 22 日] [throttle] 节流
 [2021 年 08 月 23 日] jwt
 [2021 年 08 月 24 日] loadable component
 [2021 年 08 月 25 日] sdk template
