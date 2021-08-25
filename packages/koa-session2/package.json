@@ -1,0 +1,12 @@
+{
+  "name": "koa-session2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "Marvin <huo_marvin@163.com>",
+  "license": "MIT"
+}
