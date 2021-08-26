@@ -20,9 +20,11 @@ import Button from "antd/lib/button";
 [2021 年 08 月 23 日] [koa-jwt] koa jwt 实现认证
 [2021 年 08 月 24 日] [loadable-component] loadable 函数实现
 [2021 年 08 月 25 日] [koa-session2] 简单实现
+[2021 年 08 月 26 日] [min-heap]实现一个最小堆
+[2021 年 08 月 26 日] [max-heap] 实现一个最大堆
+
 
 TODO:
-
 sdk template
 JS 类型判断函数
 webpack loader
@@ -31,9 +33,6 @@ Promise
 分享图片生成
 babel-plugin-console
 koa-session
-koa-session2
-实现一个最小堆
-实现一个最大堆
 github oauth2 demo
 React-Router 守卫实现权限控制
 Redux

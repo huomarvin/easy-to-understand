@@ -1,0 +1,12 @@
+{
+  "name": "min-heap",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watch"
+  },
+  "keywords": [],
+  "author": "Marvin <huo_marvin@163.com>",
+  "license": "MIT"
+}
