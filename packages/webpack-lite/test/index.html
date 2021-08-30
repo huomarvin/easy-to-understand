@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // module.exports = function(a, b) { return a + b };
+        // const add = require('./a');
+        // add(2,1)
+
+        // const module = {};
+        // module.exports = function (a, b) { return a + b };
+
+        // function require() {
+        //     return module.exports;
+        // }
+
+        // const add = require();
+
+        // console.log(add(1, 2))
+
+        (function (modules) {
+            function require(path) {
+                function load(path) {
+                    const module = {};
+                    const funStr = modules[path];
+                    eval(funStr)
+                    return module.exports;
+                }
+                return load(path);
+            }
+            require('./index')
+        })({
+            './index': `
+                const add = require('./add');
+                console.log(add(2, 4));
+                const PI = require('./const');
+                console.log(PI);
+            `,
+            './add': `module.exports = function (a, b) { return a + b }`,
+            './minus': `module.exports = function (a, b) { return a - b }`,
+            './const': `const PI = Math.PI; module.exports = PI`
+        });
+    </script>
+</body>
+
+</html>

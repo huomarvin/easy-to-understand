@@ -1,6 +1,6 @@
 {
   "name": "@rg0720/babel-import-console",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "a babel plugin to avoid add label for console function",
   "author": "xhh <huo.marvin@gmail.com>",
   "homepage": "https://github.com/huomarvin/easy-to-understand#readme",

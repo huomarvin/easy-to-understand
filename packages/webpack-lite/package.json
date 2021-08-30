@@ -1,0 +1,13 @@
+{
+  "name": "webpack-lite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "start": "http-server w-test",
+    "build": "nodemon lib/index.js"
+  },
+  "keywords": [],
+  "author": "Marvin <huo_marvin@163.com>",
+  "license": "MIT"
+}
