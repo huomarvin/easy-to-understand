@@ -26,6 +26,7 @@ import Button from "antd/lib/button";
 [2021 年 08 月 29 日] [babel-plugin-console] babel-console
 [2021 年 08 月 30 日] [webpack-lite] 实现一个简易版的 webpack 打包
 [2021 年 08 月 31 日] [redux-lite] 实现一个简易版的 redux
+[2021 年 09 月 01 日] [js-type] 实现 js 类型判断函数
 
 TODO:
 实现一个最大堆
