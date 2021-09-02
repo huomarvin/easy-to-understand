@@ -12,14 +12,13 @@ console.log(parrot instanceof Person);
 // instanceOf相当于在对象的原型链上去找看看有没有对应的原型对象即可
 
 function _instanceof(obj, Clz) {
-  let res = false;
-  while (obj) {
-    if (obj.__proto__ === Clz.prototype) {
-      return true;
-    }
-    obj = obj.__proto__;
+  if (typeof obj !== "object" || obj === null) return false;
+  let proto = Object.getPrototypeOf(obj);
+  while (true) {
+    if (proto === null) return false;
+    if (proto === Clz.prototype) return true;
+    proto = Object.getPrototypeOf(proto);
   }
-  return res;
 }
 
 console.log(_instanceof(parrot, Parrot));
