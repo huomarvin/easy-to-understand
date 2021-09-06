@@ -28,6 +28,8 @@ import Button from "antd/lib/button";
 [2021 年 08 月 31 日] [redux-lite] 实现一个简易版的 redux
 [2021 年 09 月 01 日] [js-type] 实现 js 类型判断函数
 [2021 年 09 月 02 日] [lazy-man] 实现 LazyMan
+[2021 年 09 月 03 日] [new-call-apply-bind] 实现 new/call/apply/bind
+[2021 年 09 月 06 日] [js-copy] 实现 js 深浅拷贝
 
 TODO:
 实现一个最大堆

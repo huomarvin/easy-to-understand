@@ -4,16 +4,12 @@
  * @returns Function
  */
 function throttle(func, period = 500) {
-  let lastTime = new Date();
   let timer = null;
   return function (...args) {
-    const now = new Date();
-    if (!timer && now - lastTime > period) {
-      timer = setTimeout(() => {
-        func.call(this, ...args);
-        lastTime = new Date();
-        timer = null;
-      }, period);
-    }
+    if (timer) return;
+    timer = setTimeout(() => {
+      func.call(this, ...args);
+      timer = null;
+    }, period);
   };
 }
