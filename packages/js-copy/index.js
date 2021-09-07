@@ -133,6 +133,7 @@ const isComplexDataType = (obj) =>
   (typeof obj === "object" || typeof obj === "function") && obj !== null;
 
 const deepClone = function (obj, hash = new WeakMap()) {
+  if (!isComplexDataType(obj)) return obj;
   if (obj.constructor === Date) return new Date(obj);
   if (obj.constructor === RegExp) return new RegExp(obj);
   if (hash.has(obj)) return hash.get(obj);
