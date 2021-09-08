@@ -31,6 +31,7 @@ import Button from "antd/lib/button";
 [2021 年 09 月 03 日] [new-call-apply-bind] 实现 new/call/apply/bind
 [2021 年 09 月 06 日] [js-copy] 实现 js 深浅拷贝
 [2021 年 09 月 07 日] [json-stringify] 实现 json-stringify
+[2021 年 09 月 08 日] [event-emitter] 实现 event-emitter
 
 TODO:
 实现一个最大堆
