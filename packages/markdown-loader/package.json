@@ -1,0 +1,23 @@
+{
+  "name": "markdown-loader",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "webpack --watch",
+    "serve": "http-server dist"
+  },
+  "keywords": [],
+  "author": "Marvin <huo_marvin@163.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "html-loader": "^2.1.2",
+    "http-server": "^13.0.1",
+    "webpack": "^5.52.1",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^4.2.0"
+  },
+  "dependencies": {
+    "marked": "^3.0.3"
+  }
+}

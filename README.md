@@ -1,6 +1,6 @@
 # easy-to-understand
 
-一个降低理解难度的项目，将复杂的内容通过简单的代码来实现
+每天造一个轮子
 
 [2021 年 08 月 18 日] [upload-file-by-koa] 一个简单的单文件前后端上传 demo
 [2021 年 08 月 19 日] [promisify] 简单实现 NodeJs.util.promisify
@@ -33,11 +33,11 @@ import Button from "antd/lib/button";
 [2021 年 09 月 07 日] [json-stringify] 实现 json-stringify
 [2021 年 09 月 08 日] [event-emitter] 实现 event-emitter
 [2021 年 09 月 09 日] [flat-arr] 实现扁平化数组
+[2021 年 09 月 10 日] [markdown-loader] 实现一个 loader
 
 TODO:
 实现一个最大堆
 sdk template
-JS 类型判断函数
 webpack loader
 webpack plugin
 Promise
