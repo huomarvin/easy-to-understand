@@ -1,42 +1,32 @@
 class EventEmitter {
-  map = new Map();
-  addListener(type, func, once = false) {
-    const listeners = this.map.get(type) || [];
-    listeners.push({
-      func,
-      once,
-      valid: true,
-    });
-    this.map.set(type, listeners);
-  }
+  events = {};
   on(type, func) {
-    this.addListener(type, func);
+    if (!this.events[type]) {
+      this.events[type] = [];
+    }
+    this.events[type].push(func);
   }
 
   off(type, func) {
-    if (!this.map.has(type)) return;
-    let listeners = this.map.get(type);
-    listeners = listeners.filter((x) => x.func !== func);
-    this.map.set(type, listeners);
+    if (!func) {
+      this.events[type] = null;
+    } else {
+      this.events[type] = this.events[type].filter((item) => item !== func);
+    }
   }
 
   emit(type, message) {
-    if (!this.map.has(type)) return;
-    let listeners = this.map.get(type);
-    listeners = listeners.map((listener) => {
-      if (listener.valid) {
-        listener.func(message);
-        if (listener.once) {
-          listener.valid = false;
-        }
-      }
-      return listener;
+    this.events[type].forEach((item) => {
+      item(message);
     });
-    this.map.set(type, listeners);
   }
 
   once(type, func) {
-    this.addListener(type, func, true);
+    const fun = (...args) => {
+      this.off(type, fun);
+      func.apply(this, args);
+    };
+    this.on(type, fun);
   }
 }
 
